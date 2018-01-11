@@ -32,6 +32,7 @@ const toRgba = (rbg) => {
   return result.join(',');
 }
 const getDebugStyles = (props) => {
+  props.debug = props.debug || {};
   const outline = props.debug.outline ? props.debug.outline : debugStyles.outline;
   const background = /^#/.test(props.debug.fill) ? `rgba(${toRgba(hexToRgb(props.debug.fill))})` : debugStyles.background;
 
