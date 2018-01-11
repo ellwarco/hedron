@@ -1254,6 +1254,7 @@ var toRgba = function toRgba(rbg) {
   return result.join(',');
 };
 var getDebugStyles = function getDebugStyles(props) {
+  props.debug = props.debug || {};
   var outline = props.debug.outline ? props.debug.outline : debugStyles.outline;
   var background = /^#/.test(props.debug.fill) ? "rgba(" + toRgba(hexToRgb(props.debug.fill)) + ")" : debugStyles.background;
 
